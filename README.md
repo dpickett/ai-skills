@@ -42,3 +42,15 @@ pnpm openskills update
 Conducts a structured architectural design interview, walking through design decisions one at a time until reaching a shared understanding and a concrete plan. If context can be gathered from the codebase, it does so automatically.
 
 **Invoke with:** `/architectural-interview` in Claude Code
+
+### pr-review
+
+Reviews a pull request and produces a filterable list of concerns for you to triage. Uses the `gh` CLI to gather PR context (diff, checks, comments, reviews). Does **not** post comments or approve/request changes — the output is a private concerns list for you to act on.
+
+**Invoke with:** `/pr-review` in Claude Code
+
+### write-a-skill
+
+Guides you through creating new agent skills with proper structure, progressive disclosure, and bundled resources. Gathers requirements, drafts the SKILL.md, and sets up any reference files or utility scripts needed.
+
+**Invoke with:** `/write-a-skill` in Claude Code
