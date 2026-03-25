@@ -54,3 +54,9 @@ Reviews a pull request and produces a filterable list of concerns for you to tri
 Guides you through creating new agent skills with proper structure, progressive disclosure, and bundled resources. Gathers requirements, drafts the SKILL.md, and sets up any reference files or utility scripts needed.
 
 **Invoke with:** `/write-a-skill` in Claude Code
+
+### improve-architecture
+
+Explores a codebase to surface and prioritize technical debt, then designs solutions and files issues for follow-up work. Applies deep modules (Ousterhout), SOLID principles, dependency injection, and domain-driven design as analytical lenses. Covers dead code, missing error handling, inconsistent patterns, missing DI, argument overloading, test coverage holes, missing database transactions, and more.
+
+**Invoke with:** `/improve-architecture` in Claude Code
