@@ -67,6 +67,21 @@ Follow the approved plan. Apply these constraints:
 - Be spare in your code comments and favor expressive code in favor of clarifying comments
 - No speculative abstractions — solve the task, not hypothetical future tasks.
 
+### TDD loop (backend code and frontend hooks/classes)
+
+For backend code and frontend hooks or classes (not UI components), use a strict red → green → refactor loop, **one test at a time** in tracer-bullet style.
+
+Repeat from until the planned behavior is fully covered.
+
+**Tracer-bullet discipline:**
+- Pick the thinnest end-to-end slice first (happy path), then layer in edge cases and error paths.
+- Do not write multiple tests before going green. One failing test at a time.
+- If a test is hard to write, that is a design signal — reconsider the interface before forcing it.
+
+**TDD scope:**
+- Apply to: backend services, controllers, utilities, data-access layers, frontend hooks, frontend classes/models.
+- Skip for: React/Vue/Svelte UI components, markup-heavy templates, CSS, config files, scripts.
+
 ## Step 4 — Validate
 
 Run every quality gate detected in Step 2 that applies to the changed files. Run independent checks in parallel where possible.
@@ -107,6 +122,7 @@ After committing, confirm success with `git log --oneline -3`.
 - [ ] Quality tooling detected
 - [ ] Plan approved by user
 - [ ] Implementation matches plan only
+- [ ] TDD loop used for backend code and frontend hooks/classes (one test at a time)
 - [ ] All available checks pass
 - [ ] Only intended files staged
 - [ ] Commit message follows convention
