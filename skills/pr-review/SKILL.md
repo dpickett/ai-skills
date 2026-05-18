@@ -5,6 +5,14 @@ description: Review a pull request and produce a filterable list of concerns. Us
 
 You are performing a context-aware code review. Your output is a **private concerns list** for the user to triage. Do NOT post comments, approve, or request changes on the PR via `gh`. The user will decide what to surface.
 
+## Prerequisite
+
+Confirm the remote using the gh cli.
+
+```bash
+gh repo view --json nameWithOwner -q '.nameWithOwner' 2>/dev/null
+```
+
 ## Step 0 — Identify the PR
 
 If the user provided a PR URL or number, use it. Otherwise ask.
